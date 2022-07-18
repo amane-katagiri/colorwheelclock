@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  font-family: 'Varela Round', sans-serif;
+  word-break: break-all;
+}
+.loading {
+  background: black;
+  animation: none;
+}
+.time-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc( var(--vh) * 100 );
+}
+#time {
+  font-size: 20vw;
+  user-select: none;
+}
+.message-container {
+  position: absolute;
+  bottom: 0em;
+  width: 100%;
+}
+.loading .message-container, .loading .button {
+  display: none;
+}
+#title {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  font-size: 0.8em;
+  user-select: none;
+}
+.message {
+  margin: 3em 0em;
+  padding: 0.5em 1em;
+  text-align: center;
+  background: rgba(128, 128, 128, 0.5);
+}
+.conf-item {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.conf-label {
+  display: inline-block;
+  width: 4em;
+}
+#reset {
+  width: 10em;
+  margin-top: 0.5em;
+  padding: 0.25em;
+  border-radius: 0.2em;
+  border: 1px solid;
+  background: none;
+}
+label.button:after {
+  content: "";
+  background-size: 1em 1em;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  height : 1em;
+  width: 1em;
+  text-align: center;
+  cursor: pointer;
+}
+input[type="checkbox"]#info, input[type="checkbox"]#conf {
+  position: absolute;
+  pointer-events: none;
+  clip: rect(0, 0, 0, 0);
+  opacity: 0;
+  appearance: none;
+}
+label.info:after {
+  display: inline;
+  background-image: url("./2754.png");
+  bottom: 1em;
+  left: 1em;
+}
+label.conf:after {
+  display: none;
+  background-image: url("./2699.png");
+  bottom: 1em;
+  right: 1em;
+}
+a.share {
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+}
+a.share img {
+  width: 1em;
+  vertical-align: text-bottom;
+}
+input[type="checkbox"]#info:checked ~ label.info:after {
+  background-image: url("./2716.png");
+  z-index: 9999;
+}
+input[type="checkbox"]#info:not(:checked) ~ .message-container {
+  display: none;
+}
+input[type="checkbox"]#info:checked ~ label.conf:after {
+  display: inline;
+  z-index: 9999;
+}
+input[type="checkbox"]#conf:not(:checked) ~ .message-container .conf-container {
+  display: none;
+}

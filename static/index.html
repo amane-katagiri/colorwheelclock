@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="./main.css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>The Color Wheel Clock</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="./favicon/32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="./favicon/16x16.png" sizes="16x16">
+  <link rel="apple-touch-icon" href="./favicon/180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <script src="./main.js"></script>
+</head>
+<body class="loading">
+  <input id="info" type="checkbox"><label class="info button" for="info"></label>
+  <input id="conf" type="checkbox"><label class="conf button" for="conf"></label>
+  <a class="share" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fclock.amane.moe%2F&text=The%20Color%20Wheel%20Clock" target="_blank" rel="noopener noreferrer"><img src="./2755.png"></a>
+  <div id="title">THE : COLOR : WHEEL : CLOCK</div>
+  <div class="time-container">
+    <div id="time"><span id="h">--</span>:<span id="m">--</span>:<span id="s">--</span></div>
+  </div>
+  <div id="message-container" class="message-container">
+    <div class="message">
+      <div>WHAT : IS : THIS?</div>
+      <div>The Color Wheel Clock maps time into color wheel and is a shichihenge project by <a href="https://ama.ne.jp/i/" target="_blank" rel="noopener noreferrer">Amane Katagiri</a>. This app is inspired by <a href="http://thecolourclock.com/" target="_blank" rel="noopener noreferrer">The Clour Clock</a>.</div>
+      <div>Emoji graphics are licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> by <a href="https://twemoji.maxcdn.com/" target="_blank" rel="noopener noreferrer">Twitter, Inc and other contributors</a>.</div>
+    </div>
+    <div class="message conf-container">
+      <div>CUSTOMIZE : COLOR : WHEEL</div>
+      <div class="conf-item"><span class="conf-label">H<sub>0</sub></span><input id="hue" type="range" min="0" max="360" step="1" value="240"></div>
+      <div class="conf-item"><span class="conf-label">S</span><input id="sat" type="range" min="0" max="100" step="1" value="80"></div>
+      <div class="conf-item"><span class="conf-label">L<sub>min</sub></span><input id="bom" type="range" min="0" max="50" step="1" value="25"></div>
+      <div class="conf-item"><span class="conf-label">L<sub>max</sub></span><input id="bon" type="range" min="50" max="100" step="1" value="75"></div>
+      <div class="conf-item"><button id="reset">RESET</button></div>
+    </div>
+  </div>
+</body>
+</html>
